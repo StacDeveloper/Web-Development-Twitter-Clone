@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "chmod +x node_modules/.bin/tailwindcss || true",
+    "postinstall": "npm update caniuse-lite browserslist && chmod +x node_modules/.bin/tailwindcss || true",
     "dev": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "build": "node node_modules/tailwindcss/lib/cli.js -i ./css/input.css -o ./css/output.css"
+    "build": "node node_modules/tailwindcss/lib/cli.js -i ./css/input.css -o ./css/output.css --minify"
   },
   "keywords": [],
   "author": "",
